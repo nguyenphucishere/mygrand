@@ -1,0 +1,66 @@
+.dashboard{
+    @apply flex;
+    @apply h-screen;
+    @apply flex-col;
+    @apply relative;
+    @apply text-[#235c25ed];
+
+
+    .clock{
+        @apply mt-[8%];
+        @apply text-center;
+        @apply font-bold;
+        
+        font-size: 5em;     
+
+        .date{
+            font-size: .2em;
+            transform: translateY(-1ch);
+
+        }
+    }
+
+    .weather{
+        @apply mx-auto;
+        @apply mt-9;
+        @apply rounded-xl;
+        @apply text-center;
+
+        width: 30rem;
+        height: 10rem;
+        border: 1px solid black;
+    }
+
+    .voice-box{
+        @apply absolute;
+        @apply right-8;
+        @apply bottom-10;
+        @apply rounded-xl;
+        @apply text-white;
+        @apply py-3;
+        @apply flex;
+        @apply flex-col;
+
+        width: 23rem;
+        height: 11rem;
+        background-color: #235C25;
+
+        .title{
+            font-size: 1.28em;
+            @apply text-center;
+            
+        }
+
+        .img {
+            @apply mt-auto;
+            @apply h-[70%];
+            @apply flex;
+
+            img{
+                @apply h-full;
+                @apply mx-auto;
+
+            }
+        }
+    }
+}
