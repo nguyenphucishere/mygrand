@@ -13,6 +13,38 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      keyframes: {
+        flyIn: {
+          'from': {
+            transform: 'translateX(5%)',
+            opacity: '0'
+          },
+          'to': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          }
+        },
+        flyIn2: {
+          '0%':{
+            transform: 'translateX(5%)',
+            opacity: '0'
+          },
+          '50%': {
+            transform: 'translateX(5%)',
+            opacity: '0'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          }
+        }
+      },
+
+      animation: {
+        flyIn: 'flyIn 1s ease-out forwards',
+        flyIn2: 'flyIn2 2s ease-out forwards',
+      }
     },
   },
   plugins: [],
