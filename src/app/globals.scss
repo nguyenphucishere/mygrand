@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Oswald:wght@200&display=swap');
+
+.landing-section{
+    @apply h-[100vh];
+    @apply min-h-[746px];
+    @apply flex;
+    @apply items-center;
+    @apply w-full;
+    
+    @apply px-[5rem];
+    
+    .text-container{
+        @apply w-7/12;
+
+        .brand-name{
+            @apply text-red-500;
+            @apply font-medium;
+        }
+
+        .title{
+            font-size: 2.5em;
+            @apply mb-3;
+            // font-family: 'Bebas Neue', sans-serif;
+            font-family: Inter;
+            @apply tracking-wider;
+
+            @apply animate-flyIn;
+        }
+
+        .desc{
+            max-width: 450px;
+            @apply tracking-[1.2px];
+            @apply text-justify;
+            @apply animate-flyIn2;
+            
+        }
+
+        .action-buttons{
+            @apply mt-10;
+        }
+
+    }
+
+    .image{
+        background-image: url('/landing-bg.png');
+        @apply w-5/12;
+        @apply aspect-square;
+        @apply bg-no-repeat;
+        @apply bg-contain;
+    }
+}
+
+.premium-banner{
+
+    @apply flex;
+
+    .content{
+        @apply mx-auto;
+        @apply w-[79%];
+        @apply h-[231px];
+        @apply rounded-3xl;
+        @apply text-[#5BC378];
+        @apply font-bold;
+        @apply p-6;
+        
+        font-size: 2em;
+        fill: #FFF;
+        filter: drop-shadow(0px 0px 57px rgba(119, 119, 119, 0.12));
+        box-shadow: 0px 0px 20px 5px rgba(237, 237, 237, 0.8);
+
+        pre{
+            @apply text-[#5BC378];
+            @apply font-bold;
+
+            font-family: inherit;
+        }
+
+    }
+}
+
+.premium-detail{
+    @apply mt-[7rem];
+    @apply p-5;
+    @apply flex;
+    @apply min-h-[80vh];
+    @apply justify-center;
+
+    .non-premium, .premium{
+        @apply p-4;
+        @apply w-5/12;
+        @apply flex;
+        @apply flex-col;
+        @apply relative;
+
+        .title{
+            @apply text-[#333];
+            @apply font-semibold;
+            @apply text-center;
+            
+            line-height: 40px;
+            letter-spacing: 0.72px;
+            font-size: 1.5em;
+        }
+
+        .hr{
+            height: 2px;
+            @apply bg-[#64CF83];
+            @apply w-3/12;
+            @apply mx-auto;
+            @apply mt-3;
+        }
+    }
+
+    .mid{
+        @apply bg-[#64CF83];
+        @apply self-center;
+
+        height: 60vh;
+        width: 3px;
+    }
+}
