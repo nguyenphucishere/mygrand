@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background: #FFF;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Oswald:wght@200&display=swap');
 
 .landing-section{
+    @apply overflow-hidden;
     @apply h-[100vh];
     @apply min-h-[746px];
     @apply flex;
@@ -61,7 +66,6 @@
     .content{
         @apply mx-auto;
         @apply w-[79%];
-        @apply h-[231px];
         @apply rounded-3xl;
         @apply text-[#5BC378];
         @apply font-bold;
@@ -83,10 +87,12 @@
 }
 
 .premium-detail{
-    @apply mt-[7rem];
-    @apply p-5;
+    @apply overflow-hidden;
+    @apply mt-[5rem];
+    @apply pt-3;
+    @apply w-[80%];
+    @apply mx-auto;
     @apply flex;
-    @apply min-h-[80vh];
     @apply justify-center;
 
     .non-premium, .premium{
@@ -113,13 +119,224 @@
             @apply mx-auto;
             @apply mt-3;
         }
+
+        .content{
+            @apply px-3;
+            @apply mt-6;
+
+            .desc{
+                @apply text-center;
+                @apply mb-4;
+            }
+
+            .item{
+                @apply mb-3;
+                @apply flex;
+
+                .content{
+                    @apply my-auto;
+                }
+
+                &::before{
+                    @apply inline-block;
+
+                    content: " ";
+                    height: 31px;
+                    width: 32px;
+                    background-image: url(/virus.png);
+                }
+            }
+            
+        }
     }
 
     .mid{
         @apply bg-[#64CF83];
         @apply self-center;
 
-        height: 60vh;
+        height: 34rem;
         width: 3px;
+    }
+
+    .premium .proceed-btn{
+        @apply mt-9;
+        @apply inline-flex;
+        @apply cursor-pointer;
+
+        width: 180px;
+
+        .content{
+            @apply my-auto;
+        }
+
+        &::before{
+            @apply inline-block;
+            @apply bg-cover;
+            @apply relative;
+
+            content: " ";
+            width: 40.117px;
+            height: 47px;
+            left: 30px;
+            background-image: url(/elc7.png);
+        }
+        
+        &::after{
+            @apply inline-block;
+            @apply bg-cover;
+            @apply my-auto;
+
+            content: " ";
+            width: 28px;
+            height: 22px;
+            background-image: url(/thin_long_02_right.png);
+        }
+    }
+}
+
+.community{
+    @apply h-screen;
+    @apply pt-16;
+    @apply mt-20;
+
+    .title{
+        @apply text-center;
+        @apply font-bold;
+
+        line-height: 40px;
+        letter-spacing: 0.72px;
+        font-size: 2em;
+    }
+
+    .hr{
+        height: 2px;
+        @apply bg-[#64CF83];
+        @apply w-1/12;
+        @apply mx-auto;
+        @apply mt-4;
+    }
+
+    .desc-title{
+        @apply text-center;
+        @apply max-w-[50%];
+        @apply p-5;
+        @apply mt-3;
+        @apply mx-auto;
+    }
+
+    .card-section{
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+        @apply mt-20;
+        @apply gap-10;
+        
+
+        .card{
+            @apply relative;
+            width: 20.625rem;
+            height: 20.625rem;
+            flex-shrink: 0;
+
+            border-radius: 1.5625rem;
+            background: #FFF;
+            box-shadow: 0px 0px 44px -5px rgba(102, 102, 102, 0.10);
+
+            .img{
+                @apply relative;
+                @apply mx-auto;
+
+                width: 13.125rem;
+                height: 12.79363rem;
+
+                top: -3rem;
+
+
+            }
+
+            .card-title{
+                @apply text-center;
+                @apply text-zinc-800;
+                @apply text-xl;
+                @apply font-semibold;
+                @apply font-['Inter'];
+                @apply mb-auto;
+                @apply top-[-1.5rem];
+                @apply relative;
+            }
+
+            .desc{
+                @apply text-neutral-500;
+                @apply text-sm;
+                @apply font-medium;
+                @apply leading-7;
+                @apply tracking-tight;
+                @apply w-10/12;
+                @apply mx-auto;
+                @apply top-[-1rem];
+                @apply relative;
+            }
+        }
+    }
+
+    
+}
+
+.contact-us{
+    @apply min-h-screen;
+    @apply relative;
+    @apply mt-32;
+    
+    background-image: linear-gradient(165deg, #FFFFFF 50%, #64CF83 50%);
+
+    .box{
+        @apply bg-white;
+        @apply rounded-[40px];
+        @apply w-[80%];
+        @apply mx-auto;
+        @apply py-10;
+
+        box-shadow: 0px 0px 44px -5px rgba(102, 102, 102, 0.10);
+
+        .title{
+            @apply text-center;
+            @apply font-bold;
+    
+            line-height: 40px;
+            letter-spacing: 0.72px;
+            font-size: 2em;
+        }
+    
+        .hr{
+            height: 2px;
+            @apply bg-[#64CF83];
+            @apply w-1/12;
+            @apply mx-auto;
+            @apply mt-4;
+        }
+    
+        .desc-title{
+            @apply text-center;
+            @apply max-w-[70%];
+            @apply p-5;
+            @apply mt-3;
+            @apply mx-auto;
+        }
+
+        .img-cover{
+            @apply bg-white;
+            @apply w-[80%];
+            @apply mx-auto;
+
+            .img{
+                @apply h-[300px];
+                @apply bg-no-repeat;
+                @apply bg-contain;
+                @apply bg-center;
+                background-image: url(/contact.png);
+                
+            }
+        }
+
     }
 }
