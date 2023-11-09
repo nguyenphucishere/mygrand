@@ -1,3 +1,4 @@
+import "./landing_page.scss";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="image">
+        <div className="image hidden md:block">
 
         </div>
       </div>
@@ -136,8 +137,40 @@ export default function Home() {
           <div className="img-cover">
             <div className="img"></div>
           </div>
+
+          <div className="form-container">
+            <form action="#" method="post" className="form">
+              <div className="input-group user-ico form-item">
+                <input type="text" name="full_name" placeholder="Name" />
+              </div>
+
+              <div className="input-group phone-num-ico form-item">
+                <input type="text" maxLength={11} name="phone_number" placeholder="Phone number" />
+              </div>
+
+              <div className="input-group dropdown-ico form-item">
+                <input type="text" name="help_msg" placeholder="How can we help you?" />
+              </div>
+
+              <div className="input-group message-ico form-item after-top">
+                <textarea name="desc" rows={3} placeholder="Description" />
+              </div>
+
+              <button className="style-btn" type="submit">
+                <div className="content">
+                  Click to send
+                </div>
+              </button>
+
+            </form>
+          </div>
+        </div>
+
+        <div className="credit">
+          © 2021, Design & Developed by MyGrand
         </div>
       </div>
+
     </main>
   )
 }
